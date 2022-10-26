@@ -12,9 +12,10 @@
     <div class="navbar">
         <nav id="controls"> 
             <ul>
-                <li><a href="#"> Reset Game</a></li>
-                <li> Score</li>
-                <li>Time Left</li>
+                <li class="start-game"><a href="index.html"> Start Game</a></li>
+                <li class="reset-game"><a href="index.html"> Reset Game</a></li>
+                <li class="score"> Score<span id="score">  0</span></li>
+                <li class="time">Time Left<span id="time-left">  0</span></li>
             </ul>
         </nav>
         <img src="img/alfonso-castro-HaGwCk2AD84-unsplash.jpg" alt="snake-logo" class="snake-logo">
@@ -23,18 +24,14 @@
 
     <!--Create a section for the game to be held and played in,
         an area so that the snake doesnt run off the screen -->
+        <section>
+                <div class="gameboard">    
+                </div>
+            </section>
 
-
-        <div class="play-game">
-            <section class="game-arena">
-                <img src="img/ivan-bandura-n7NxVeTvTag-unsplash.jpg" alt="gameplay" class="gameplay">
-            
-
-        </section>
-    </div>
     <footer>
         <h2>Thanks for playing</h2>
     </footer>
 </body>
-<script src = "index.js"></script>
+<script src = "snake.js" ></script>
 </html>

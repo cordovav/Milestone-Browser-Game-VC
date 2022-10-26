@@ -1,60 +1,92 @@
 /*add css to our body*/
 body{
-background-color: #90b18e;
-}
-.play-game{
+    background-color: #90b18e;
+    justify-content: center;
     align-items: center;
+    margin: 0;
 }
+
+
 .navbar{
-    border: 2px solid black;
-    width: 100%;
+    border: 2px solid #e7cd93;
+    width: 70%;
     flex: 1;
+    margin: auto;
+    text-align: center;
+    align-content: center;
     align-items: center;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
+
 nav ul li{
     list-style: none;
     display: inline-block;
     text-decoration: none;
     color: #e7cd93;
-    margin: 30px;
+    margin: 10px;
     font-size: 25px;
 
 }
+
 nav ul li a{
     text-decoration: none;
     color: #e7cd93;
     font-size: 25px;
 }
+
 nav ul li a:hover{
     color: blue;
     
 }
+
 .snake-logo{
-    width: 150px;
-    height: 150px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    padding: 20px;
+    padding: 10px;
 }
-.gameplay{
-    height: 100vh;
+
+
+.gameboard{
+    background-image: url('img/ivan-bandura-n7NxVeTvTag-unsplash.jpg');
+    background-size: 100%;
+    background-position: center;
+    height: 500px;
+    width: 500px ;
+    text-align: center;
     border:10px solid #e7cd93;
+    position: relative;
     justify-content: center;
-    display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
     opacity: 0.5;
-    margin-top: 1em;
-    
+    margin-top: 1em;    
+    display: grid;
+    /* this assigning grid to display will create it to be like a grid
+    and below is the dimensions, 25 by 25 frames*/
+    grid-template-rows: repeat(25, 1fr);
+    grid-template-columns: repeat(25, 1fr);
 }
+
 footer{
     width: 100%;
-    flex: 1;
     align-items: center;
     display: flex;
     justify-content: space-evenly;
     color: #e7cd93;
-    margin: 5px;
+    margin: auto;
+    text-align: center;
+}
+
+.snake{
+    background-color: black;
+    border: 2px solid white;
+    
+}
+
+.rodents{
+    background-color: white;
+    border: 2px solid black;
+
 }
