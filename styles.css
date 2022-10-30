@@ -48,7 +48,7 @@ nav ul li a:hover{
 }
 
 
-.gameboard{
+#gameboard{
     background-image: url('img/ivan-bandura-n7NxVeTvTag-unsplash.jpg');
     background-size: 100%;
     background-position: center;
@@ -79,9 +79,20 @@ footer{
     text-align: center;
 }
 
-.snake-head, .rodent{
+.snake-head, .rodent .snake{
     height: 100%;
     width: 100%;
     opacity: 1;
     z-index: 1;
+    border: 2px solid white;
+}
+.snake{
+    background-color: yellow;
+}
+.snake-head{
+    background: linear-gradient(yellow, red);
+}
+.rodent{
+    background-color: gray;
+    border: 2px solid whitesmoke;
 }
