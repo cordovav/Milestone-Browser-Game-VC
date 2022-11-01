@@ -61,8 +61,9 @@ nav ul li a:hover{
     margin-left: auto;
     margin-right: auto;
     opacity: 0.5;
-    margin-top: 1em;    
+    margin-top: 4px;    
     display: grid;
+    box-shadow: 5px 5px 5px 5px #595953;
     /* this assigning grid to display will create it to be like a grid
     and below is the dimensions, 25 by 25 frames*/
     grid-template-rows: repeat(25, 1fr);
@@ -95,4 +96,37 @@ footer{
 .rodent{
     background-color: gray;
     border: 2px solid whitesmoke;
+}
+
+
+.directional-keypad{
+    border: 2px solid #e7cd93;
+    width: auto;
+    height: 70px;
+    margin-right: 20px;
+}
+
+.directions{
+    margin-top: 4px;
+    text-align: center;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 75px;
+}
+
+.directions h2{
+    padding-left: auto;
+    width: auto;
+}
+.directions ul{
+    width: auto;
+}
+.directions ul li {
+    text-align: left;
+    text-decoration: none;
+    color: #e7cd93;
+    margin: 10px;
+    font-size: 15px;
 }
