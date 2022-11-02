@@ -14,15 +14,15 @@ let foodBait = { x: 10, y: 10 };
 function main(startGame) {
     window.requestAnimationFrame(main);
      //console.log(startGame) //to see the time of the game
-    if ((startGame - lastPaintTime) / 1000 < 1 / speed) {
+    if ((startGame - lastPaintTime)/1000 < 1 / speed) {
     return;
     }
     lastPaintTime = startGame;
-    startTimer();
+    //startTimer();
     gamePlay();
 }
 
-//create function in case the sanke collides of bumps into walls
+//create function in case the snake collides of bumps into walls
 
 function didSnakeCollide(snake) {
   //if the snake runs into inself
@@ -30,16 +30,13 @@ function didSnakeCollide(snake) {
         if (snake[i].x === snake[0].x && snake[i].y === snake[0].y) {
         return true;
     }
+}
     //when snake bumps into wall
 
-    if (
-        snake[0].x >= 25 || snake[0].x <= 0 || snake[0].y >= 25 || snake[0].y <= 0
-    ) {
+    if (snake[0].x >= 25 || snake[0].x <= 0 || snake[0].y >= 25 || snake[0].y <= 0){
         return true;
     }
     return false;
-    }
-
 }
 
 function gamePlay() {
@@ -69,6 +66,10 @@ function gamePlay() {
          x: Math.round(a + (b - a) * Math.random()),
          y: Math.round(a + (b - a) * Math.random()),
     };
+    if(score === 10 ){
+        alert("YOU WIN");
+        location.reload();
+    }
     }
 
   //for loop for moving the snake
@@ -158,3 +159,5 @@ function startTimer(){
     display = document.querySelector("#time-left");
     timeLeft(oneMinute, display)   
 }
+
+startTimer();

@@ -9,7 +9,7 @@ body{
 
 .navbar{
     border: 2px solid #e7cd93;
-    width: 70%;
+    width: 90%;
     flex: 1;
     margin: auto;
     text-align: center;
@@ -113,7 +113,7 @@ footer{
     align-items: center;
     display: flex;
     justify-content: center;
-    height: 75px;
+    height: auto;
 }
 
 .directions h2{
@@ -126,7 +126,9 @@ footer{
 .directions ul li {
     text-align: left;
     text-decoration: none;
-    color: #e7cd93;
-    margin: 10px;
+    color: black;
+    list-style: none;
+    margin: 5px;
     font-size: 15px;
+
 }
