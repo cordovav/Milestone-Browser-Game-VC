@@ -89,6 +89,7 @@ footer{
 }
 .snake{
     background-color: yellow;
+    border: 2px solid #595953;
 }
 .snake-head{
     background: linear-gradient(yellow, red);

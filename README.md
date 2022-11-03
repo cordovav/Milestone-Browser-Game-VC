@@ -13,7 +13,7 @@ WEBSITE
 GIT
     to download the ver latest source off the GIT server do this:
 
-     git clone https://github.com/
+     git clone https://github.com/cordovav/Milestone-Browser-Game-VC
     
     (you will get a directory named filled with all the source code)
 
@@ -22,6 +22,7 @@ SECURITY PROBLEMS
     Report suspected problems via our homepage
 
     https://github.com/cordovav
+
 
 NOTICE
 

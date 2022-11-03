@@ -1,7 +1,7 @@
 //Assign all the elements being used
 const snakeGameBoard = document.querySelector("#gameboard");
 const scoreBoard = document.querySelector("#score");
-//const startGame = document.querySelector('.start-game')
+const startGame = document.getElementsByClassName('start-game');
 
 let snakePosition = [{ x: 5, y: 6 }]; //snake array
 let inputDirection = { x: 0, y: 0 };
@@ -23,16 +23,14 @@ function main(startGame) {
 }
 
 //create function in case the snake collides of bumps into walls
-
 function didSnakeCollide(snake) {
-  //if the snake runs into inself
+    //if the snake runs into inself
     for (let i = 1; i < snakePosition.length; i++) {
         if (snake[i].x === snake[0].x && snake[i].y === snake[0].y) {
         return true;
     }
 }
     //when snake bumps into wall
-
     if (snake[0].x >= 25 || snake[0].x <= 0 || snake[0].y >= 25 || snake[0].y <= 0){
         return true;
     }
@@ -40,7 +38,7 @@ function didSnakeCollide(snake) {
 }
 
 function gamePlay() {
-  //add functions to update the snake array when it eats the food
+    //add functions to update the snake array when it eats the food
     if (didSnakeCollide(snakePosition)) {
     inputDirection = { x: 0, y: 0 };
     alert("GAME OVER!!");
@@ -48,9 +46,8 @@ function gamePlay() {
     snakePosition = [{ x: 5, y: 6 }];
     score = 0;
     }
-
-  //add a if statemtn for when the snake eats the food to update the score
-  //and update thr snake length
+    //add a if statemtn for when the snake eats the food to update the score
+    //and update thr snake length
     if (snakePosition[0].y === foodBait.y && snakePosition[0].x === foodBait.x) {
         score += 1;
 
@@ -66,13 +63,15 @@ function gamePlay() {
          x: Math.round(a + (b - a) * Math.random()),
          y: Math.round(a + (b - a) * Math.random()),
     };
+    //add a WIN senario
+    //if user scores 10 they win the game
     if(score === 10 ){
         alert("YOU WIN");
         location.reload();
     }
     }
 
-  //for loop for moving the snake
+    //for loop for moving the snake
     for (let i = snakePosition.length - 2; i >= 0; i--) {
     snakePosition[i + 1] = { ...snakePosition[i] };
     }
@@ -80,12 +79,12 @@ function gamePlay() {
     snakePosition[0].x += inputDirection.x;
     snakePosition[0].y += inputDirection.y;
 
-  //now time to display the snake and food on the gameboard
-snakeGameBoard.innerHTML = "";
-    snakePosition.forEach((e, index) => {
-    snakeElement = document.createElement("div");
-    snakeElement.style.gridRowStart = e.y;
-    snakeElement.style.gridColumnStart = e.x;
+    //now time to display the snake and food on the gameboard
+    snakeGameBoard.innerHTML = "";
+        snakePosition.forEach((e, index) => {
+        snakeElement = document.createElement("div");
+        snakeElement.style.gridRowStart = e.y;
+        snakeElement.style.gridColumnStart = e.x;
 
     if (index === 0) {
         snakeElement.classList.add("snake-head");
@@ -104,6 +103,7 @@ snakeGameBoard.innerHTML = "";
 
 //add controls to the snake to have it move around the grid
 window.requestAnimationFrame(main);
+
 window.addEventListener("keydown", function (e) {
     inputDirection = { x: 0, y: 1 };
     switch (e.key) {
@@ -136,6 +136,7 @@ window.addEventListener("keydown", function (e) {
 });
 
 //set a timer to span id=time-left
+//set a 60 sec timer to create an end to the game
 function timeLeft(duration, display){
     let timer = duration, minutes, seconds;
     setInterval(function(){
@@ -157,6 +158,7 @@ function timeLeft(duration, display){
 function startTimer(){
     let oneMinute = 60,
     display = document.querySelector("#time-left");
+    //startGame.addEventListener('click', startTimer());
     timeLeft(oneMinute, display)   
 }
 
