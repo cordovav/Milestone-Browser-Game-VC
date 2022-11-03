@@ -48,5 +48,5 @@ CREDITS
     Credits for Snake logo Image is to Alfonso Castro url(https://unsplash.com/photos/n7NxVeTvTag)
     Credits for Snake Background is to Ivan Bandura url(https://unsplash.com/photos/HaGwCk2AD84)
     Credits to inspiration for SnakeGame by WebDevSimplified url(https://www.youtube.com/watch?v=QTcIXok9wNY&t=1490s)
-    Credits to Katha Youtube, for inspiration on Javascript Code (https://www.youtube.com/watch?v=2ZDnw6ifdSI&t=4766s)
-
+    Credits to Katha Youtube, for inspiration on Javascript Code url(https://www.youtube.com/watch?v=2ZDnw6ifdSI&t=4766s)
+    Credits for the CountDownTimer from CodeGrepper url(https://www.codegrepper.com/code-examples/javascript/create+60+seconds+countdown+timer++in+javascript+stackoverflow)
