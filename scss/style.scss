@@ -1,14 +1,26 @@
-/*add css to our body*/
+// define our sass variable colors to make code more readable
+$primary-color: #90b18e;
+$secondary-color: #e7cd93;
+$shadow-color: #595953;
+$snake-color: yellow;
+$rodent-color: gray;
+
+
+//defining sass dimension variables for the gameboard
+$gameboard-width:500px;
+$gameboard-height:500px;
+$gameboard-grid-size:25;
+
+//add our variables to our css
 body{
-    background-color: #90b18e;
+    background-color: $primary-color;
     justify-content: center;
     align-items: center;
     margin: 0;
 }
 
-
 .navbar{
-    border: 2px solid #e7cd93;
+    border: 2px solid $secondary-color;
     width: 90%;
     flex: 1;
     margin: auto;
@@ -23,21 +35,19 @@ nav ul li{
     list-style: none;
     display: inline-block;
     text-decoration: none;
-    color: #e7cd93;
+    color: $secondary-color;
     margin: 10px;
     font-size: 25px;
-
 }
 
-nav ul li a{
+nav ul li a {
     text-decoration: none;
-    color: #e7cd93;
+    color: $secondary-color;
     font-size: 25px;
 }
 
 nav ul li a:hover{
     color: blue;
-    
 }
 
 .snake-logo{
@@ -47,61 +57,61 @@ nav ul li a:hover{
     padding: 10px;
 }
 
-
-#gameboard{
-    background-image: url('img/ivan-bandura-n7NxVeTvTag-unsplash.jpg');
-    background-size: 100%;
-    background-position: center;
-    height: 500px;
-    width: 500px ;
-    text-align: center;
-    border:10px solid #e7cd93;
-    position: relative;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    opacity: 0.5;
-    margin-top: 4px;    
-    display: grid;
-    box-shadow: 5px 5px 5px 5px #595953;
-    /* this assigning grid to display will create it to be like a grid
-    and below is the dimensions, 25 by 25 frames*/
-    grid-template-rows: repeat(25, 1fr);
-    grid-template-columns: repeat(25, 1fr);
-}
-
 footer{
     width: 100%;
     align-items: center;
     display: flex;
     justify-content: space-evenly;
-    color: #e7cd93;
+    color: $secondary-color;
     margin: auto;
     text-align: center;
 }
 
-.snake-head, .rodent .snake{
+#gameboard{
+    background-image: url('img/ivan-bandura-n7NxVeTvTag-unsplash.jpg');
+    background-size: 100%;
+    background-position: center;
+    height: $gameboard-height;
+    width: $gameboard-width;
+    text-align: center;
+    border: 10px solid $secondary-color;
+    position: relative;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4px;
+    opacity: .5;
+    display: grid;
+    box-shadow: 5px 5px 5px 5px $shadow-color;
+    grid-template-rows: repeat($gameboard-grid-size, 1fr);
+    grid-template-columns: repeat($gameboard-grid-size, 1fr);
+}
+
+.snake-head .rodent .snake{
     height: 100%;
     width: 100%;
     opacity: 1;
     z-index: 1;
     border: 2px solid white;
 }
+
 .snake{
-    background-color: yellow;
-    border: 2px solid #595953;
+    background-color: $snake-color;
+    border: 2px solid $shadow-color;
 }
+
 .snake-head{
-    background: linear-gradient(yellow, red);
+    background: linear-gradient($snake-color, red)
 }
+
 .rodent{
-    background-color: gray;
+    background-color: $rodent-color;
     border: 2px solid whitesmoke;
 }
 
-
+//styling the directional keypad
 .directional-keypad{
-    border: 2px solid #e7cd93;
+    border: 2px solid $secondary-color;
     width: auto;
     height: 70px;
     margin-right: 20px;
@@ -115,21 +125,22 @@ footer{
     display: flex;
     justify-content: center;
     height: auto;
-}
 
-.directions h2{
+    h2{
     padding-left: auto;
     width: auto;
 }
-.directions ul{
+
+    ul{
     width: auto;
 }
-.directions ul li {
+
+    li {
     text-align: left;
     text-decoration: none;
     color: black;
     list-style: none;
     margin: 5px;
     font-size: 15px;
-
+}
 }
